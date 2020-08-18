@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homes on Yi Mei @ VUW</title>
-    <link>https://meiyi1986.github.io/home/</link>
-    <description>Recent content in Homes on Yi Mei @ VUW</description>
+    <title>Homes on Saiful Islam @ Griffith</title>
+    <link>https://mdsaifulislamit.github.io/home/</link>
+    <description>Recent content in Homes on Saiful Islam @ Griffith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://meiyi1986.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mdsaifulislamit.github.io/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://meiyi1986.github.io/home/hero_carousel/</link>
+      <link>https://mdsaifulislamit.github.io/home/hero_carousel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://meiyi1986.github.io/home/hero_carousel/</guid>
+      <guid>https://mdsaifulislamit.github.io/home/hero_carousel/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://meiyi1986.github.io/home/slider/</link>
+      <link>https://mdsaifulislamit.github.io/home/slider/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://meiyi1986.github.io/home/slider/</guid>
+      <guid>https://mdsaifulislamit.io/home/slider/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Academic</title>
-      <link>https://meiyi1986.github.io/home/hero/</link>
+      <link>https://mdsaifulislamit.github.io/home/hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://meiyi1986.github.io/home/hero/</guid>
+      <guid>https://mdsaifulislamit.github.io/home/hero/</guid>
       <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://meiyi1986.github.io/home/about/</link>
+      <link>https://mdsaifulislamit.github.io/home/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://meiyi1986.github.io/home/about/</guid>
+      <guid>https://mdsaifulislamit.github.io/home/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>News</title>
-      <link>https://meiyi1986.github.io/home/news/</link>
+      <link>https://mdsaifulislamit.github.io/home/news/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://meiyi1986.github.io/home/news/</guid>
+      <guid>https://mdsaifulislamit.github.io/home/news/</guid>
       <description>[PhD Vacancy] I am looking for PhD/MSc/Honours/Summer Research students in Evolutionary Computation and Machine Learning for Scheduling and Combinatorial Optimisation. If you have similar research interests with me, please do not hesitate to contact me.
  [Call for papers] We are organising IEEE Symposium on Evolutionary scheduling and combinatorial optimisation (IEEE ESCO). Submission due date: August 1, 2019.
  2018-12, our paper won the Australasian Joint Conference on Artificial Intelligence Best Paper Runner-Up Award!</description>
@@ -59,10 +59,10 @@
     
     <item>
       <title>Skills</title>
-      <link>https://meiyi1986.github.io/home/skills/</link>
+      <link>https://mdsaifulislamit.github.io/home/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://meiyi1986.github.io/home/skills/</guid>
+      <guid>https://mdsaifulislamit.github.io/home/skills/</guid>
       <description></description>
     </item>
     
