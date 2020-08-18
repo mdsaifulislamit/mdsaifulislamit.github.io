@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.0.0">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Yi Mei">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="2020/08/12, Kirita-Rose Escott 2020/08/05, Guanqiang Gao, 2020/07/29, Tao Shi 2020/07/21, attending WCCI 2020 2020/07/14, 2020/07/07, Boxiong Tan, overview of PhD thesis: evolutionary computation for container-based cloud resource allocation 2020/07/01, Shaolin Wang, proposal seminar 2020/06/24, Whole Group, keynote on AAMAS 2020/06/17, Fangfang Zhang, guided crossover for genetic programming for dynamic flexible job shop scheduling 2020/06/10, Joao Costa, practice on PhD proposal objectives 2020/06/03, Whole Group, proofreading and reference management 2020/05/27, Kirita-Rose Escott, GRP-HEFT: A Budget-Constrained Resource Provisioning Scheme for Workflow Scheduling in IaaS Clouds 2020/05/20, Shaolin Wang, simplification techniques in GP 2020/05/13, Kirita-Rose Escott, Multi-objective optimization for workflow scheduling under task selection policies in clouds 2020/05/06, Mazhar Anzari Ardeh, generalised surrogate-assisted memetic algorithm 2020/04/29, Chen Wang, discussion on EvoStar 2020 2020/04/22, Soheila Sadeghiram, A User-Preference Driven Lexicographic Approach for Multi-Objective Web Service Composition 2020/04/15, Guanqiang Gao, memetic algorithm for multi-robot task allocation 2020/04/08, Chen Wang, survey on noisy evolutionary computation.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://meiyi1986.github.io/ecco-talks/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="https://meiyi1986.github.io/index.xml" type="application/rss+xml" title="Yi Mei @ VUW">
+  <link rel="feed" href="https://meiyi1986.github.io/index.xml" type="application/rss+xml" title="Yi Mei @ VUW">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://meiyi1986.github.io/ecco-talks/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Yi Mei @ VUW">
+  <meta property="og:url" content="https://meiyi1986.github.io/ecco-talks/">
+  <meta property="og:title" content="Talks of the ECCO group | Yi Mei @ VUW">
+  <meta property="og:description" content="2020/08/12, Kirita-Rose Escott 2020/08/05, Guanqiang Gao, 2020/07/29, Tao Shi 2020/07/21, attending WCCI 2020 2020/07/14, 2020/07/07, Boxiong Tan, overview of PhD thesis: evolutionary computation for container-based cloud resource allocation 2020/07/01, Shaolin Wang, proposal seminar 2020/06/24, Whole Group, keynote on AAMAS 2020/06/17, Fangfang Zhang, guided crossover for genetic programming for dynamic flexible job shop scheduling 2020/06/10, Joao Costa, practice on PhD proposal objectives 2020/06/03, Whole Group, proofreading and reference management 2020/05/27, Kirita-Rose Escott, GRP-HEFT: A Budget-Constrained Resource Provisioning Scheme for Workflow Scheduling in IaaS Clouds 2020/05/20, Shaolin Wang, simplification techniques in GP 2020/05/13, Kirita-Rose Escott, Multi-objective optimization for workflow scheduling under task selection policies in clouds 2020/05/06, Mazhar Anzari Ardeh, generalised surrogate-assisted memetic algorithm 2020/04/29, Chen Wang, discussion on EvoStar 2020 2020/04/22, Soheila Sadeghiram, A User-Preference Driven Lexicographic Approach for Multi-Objective Web Service Composition 2020/04/15, Guanqiang Gao, memetic algorithm for multi-robot task allocation 2020/04/08, Chen Wang, survey on noisy evolutionary computation."><meta property="og:image" content="https://meiyi1986.github.io/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  
+  
+  
+
+  
+
+  
+
+  <title>Talks of the ECCO group | Yi Mei @ VUW</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Yi Mei @ VUW</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#research">
+            
+            <span>Research</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#grants">
+            
+            <span>Grants&Awards</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_featured">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#teaching">
+            
+            <span>Teaching</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#supervision">
+            
+            <span>Supervision</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#services">
+            
+            <span>Services</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#resources">
+            
+            <span>Resources</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Talks of the ECCO group</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="" itemprop="datePublished">
+<meta content="" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Talks%20of%20the%20ECCO%20group&amp;url=https%3a%2f%2fmeiyi1986.github.io%2fecco-talks%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fmeiyi1986.github.io%2fecco-talks%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmeiyi1986.github.io%2fecco-talks%2f&amp;title=Talks%20of%20the%20ECCO%20group"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fmeiyi1986.github.io%2fecco-talks%2f&amp;title=Talks%20of%20the%20ECCO%20group"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Talks%20of%20the%20ECCO%20group&amp;body=https%3a%2f%2fmeiyi1986.github.io%2fecco-talks%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <ul>
+<li>2020/08/12, <strong><a href="https://ecs.victoria.ac.nz/Main/Kirita-RoseEscott">Kirita-Rose Escott</a></strong></li>
+<li>2020/08/05, <strong>Guanqiang Gao</strong>,</li>
+<li>2020/07/29, <strong><a href="https://ecs.victoria.ac.nz/Main/GradTaoShi">Tao Shi</a></strong></li>
+<li>2020/07/21, attending WCCI 2020</li>
+<li>2020/07/14,</li>
+<li>2020/07/07, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, overview of PhD thesis: evolutionary computation for container-based cloud resource allocation</li>
+<li>2020/07/01, <strong><a href="https://ecs.victoria.ac.nz/Main/GradShaolinWang">Shaolin Wang</a></strong>, proposal seminar</li>
+<li>2020/06/24, <strong>Whole Group</strong>, keynote on AAMAS</li>
+<li>2020/06/17, <strong><a href="https://ecs.victoria.ac.nz/Main/GradFangFangZhang">Fangfang Zhang</a></strong>, guided crossover for genetic programming for dynamic flexible job shop scheduling</li>
+<li>2020/06/10, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJoaoCosta">Joao Costa</a></strong>, practice on PhD proposal objectives</li>
+<li>2020/06/03, <strong>Whole Group</strong>, proofreading and reference management</li>
+<li>2020/05/27, <strong><a href="https://ecs.victoria.ac.nz/Main/Kirita-RoseEscott">Kirita-Rose Escott</a></strong>, GRP-HEFT: A Budget-Constrained Resource Provisioning Scheme for Workflow Scheduling in IaaS Clouds</li>
+<li>2020/05/20, <strong><a href="https://ecs.victoria.ac.nz/Main/GradShaolinWang">Shaolin Wang</a></strong>, simplification techniques in GP</li>
+<li>2020/05/13, <strong><a href="https://ecs.victoria.ac.nz/Main/Kirita-RoseEscott">Kirita-Rose Escott</a></strong>, Multi-objective optimization for workflow scheduling under task selection policies in clouds</li>
+<li>2020/05/06, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMazharAnsariArdeh">Mazhar Anzari Ardeh</a></strong>, generalised surrogate-assisted memetic algorithm</li>
+<li>2020/04/29, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, discussion on EvoStar 2020</li>
+<li>2020/04/22, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, A User-Preference Driven Lexicographic Approach for Multi-Objective Web Service Composition</li>
+<li>2020/04/15, <strong>Guanqiang Gao</strong>, memetic algorithm for multi-robot task allocation</li>
+<li>2020/04/08, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, survey on noisy evolutionary computation.</li>
+<li>2020/04/01, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJoaoCosta">Joao Costa</a></strong>, research objectives for PhD proposals, part 3</li>
+<li>2020/03/25, <strong><a href="https://ecs.victoria.ac.nz/Main/GradTaoShi">Tao Shi</a></strong>, TPDS paper</li>
+<li>2020/03/18, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJoaoCosta">Joao Costa</a></strong>, research objectives for PhD proposals, part 2</li>
+<li>2020/03/11, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJoaoCosta">Joao Costa</a></strong>, research objectives for PhD proposals</li>
+<li>2020/03/04, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, ontology-based data augmentation for medical text classification</li>
+<li>2020/02/26, <strong><a href="https://ecs.victoria.ac.nz/Main/GradGuiyingHuang">Victoria Huang</a></strong>, multi-agent reinforcement learning for online network controller scheduling</li>
+<li>2020/02/19, <strong><a href="https://ecs.victoria.ac.nz/Main/GradShaolinWang">Shaolin Wang</a></strong>, multi-objective genetic programming for evolving routing policies for uncertain arc routing.</li>
+<li>2020/02/12, <strong><a href="https://ecs.victoria.ac.nz/Main/GradFangFangZhang">Fangfang Zhang</a></strong> and <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, give presentation on accepted EvoStar papers.</li>
+<li>2020/02/05, <strong>Whole Group</strong>, quick catch up.</li>
+<li>2020/01/29, <strong>Whole Group</strong>, quick catch up.</li>
+<li>2020/01/22, <strong>Whole Group</strong>, how to catch up conference deadlines.</li>
+<li>2020/01/08, <strong>Whole Group</strong>, new year start off.</li>
+<li>2019/11/26, <strong>Whole Group</strong>, how to write good PhD thesis.</li>
+<li>2019/11/19, <strong><a href="https://ecs.victoria.ac.nz/Main/GradShaolinWang">Shaolin Wang</a></strong>, ensemble learning with genetic programming hyper-heuristic for uncertain arc routing problem.</li>
+<li>2019/11/12, <strong>Whole Group</strong>, how to do literature review and write literature review.</li>
+<li>2019/11/05, 3-minutes presentation practice, <strong><a href="https://ecs.victoria.ac.nz/Main/GradTaoShi">Tao Shi</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradShaolinWang">Shaolin Wang</a></strong></li>
+<li>2019/10/29, 3-minutes presentation practice, <strong><a href="https://ecs.victoria.ac.nz/Main/Kirita-RoseEscott">Kirita-Rose Escott</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMazharAnsariArdeh">Mazhar Anzari Ardeh</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJoaoCosta">Joao Costa</a></strong></li>
+<li>2019/10/22, 3-minutes presentation practice, <strong><a href="https://ecs.victoria.ac.nz/Main/YahuiJia">Yahui Jia</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradFangFangZhang">Fangfang Zhang</a></strong>, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong></li>
+<li>2019/10/15, Rhaz Solomon, GP with NEAT for bloat control.</li>
+<li>2019/10/08, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>,</li>
+<li>2019/10/01, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, a new memetic algorithm with distance-guided crossover for distributed web service composition.</li>
+<li>2019/09/24, <strong>Whole Group</strong>, how to do research and how to write papers.</li>
+<li>2019/09/17, Sven Hartmann, NP-completeness and NP-hardness.</li>
+<li>2019/09/10, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJoaoCosta">Joao Costa</a></strong>, VRP with drones.</li>
+<li>2019/09/03, <strong><a href="https://ecs.victoria.ac.nz/Main/GradGuiyingHuang">Victoria Huang</a></strong>, internet congestion control by deep reinforcement learning.</li>
+<li>2019/08/27, <strong><a href="https://ecs.victoria.ac.nz/Main/GradTaoShi">Tao Shi</a></strong>,</li>
+<li>2019/08/20, <strong><a href="https://ecs.victoria.ac.nz/Main/YahuiJia">Yahui Jia</a></strong>, ant colony optimisation for network flow scheduling.</li>
+<li>2019/08/13, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, EDA-based local search in NSGA-II for solving multi-objective semantic web service composition.</li>
+<li>2019/08/06, <strong><a href="https://ecs.victoria.ac.nz/Main/Kirita-RoseEscott">Kirita-Rose Escott</a></strong>, discussions on research directions.</li>
+<li>2019/07/30, <strong>Whole Group</strong>, discussions about lexicase selection in GP.</li>
+<li>2019/07/23, <strong>Whole Group</strong>, share experience in GECCO2019.</li>
+<li>2019/07/16, Shaolin Wang, practice on GECCO presentation again.</li>
+<li>2019/07/09, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMazharAnsariArdeh">Mazhar Anzari Ardeh</a></strong>, practice on PRICAI presentation.</li>
+<li>2019/07/09, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, practice on PRICAI presentation.</li>
+<li>2019/07/02, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, practice on GECCO 2019 presentation.</li>
+<li>2019/07/02, <strong><a href="https://ecs.victoria.ac.nz/Main/GradShaolinWang">Shaolin Wang</a></strong>, practice on GECCO 2019 presentation.</li>
+<li>2019/06/25, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMazharAnsariArdeh">Mazhar Anzari Ardeh</a></strong>, practice on PhD proposal seminar.</li>
+<li>2019/06/18, <strong><a href="https://www.wbs.ac.uk/about/person/juergen-branke/">Prof Juergen Branke</a></strong>, <strong>Seminar</strong>: surrogate-assisted optimisation.</li>
+<li>2019/06/03, <strong><a href="https://ecs.victoria.ac.nz/Main/GradFangFangZhang">Fangfang Zhang</a></strong>, discuss recent work on feature selection with GP.</li>
+<li>2019/05/29, <strong><a href="https://ecs.victoria.ac.nz/Main/GradRamyaAnasseriyilViswambaran">Ramya Anasseriyil Viswambaran</a></strong>, practice on PhD proposal seminar.</li>
+<li>2019/05/22, <strong><a href="https://ecs.victoria.ac.nz/Main/GradTaoShi">Tao Shi</a></strong>, practice on PhD proposal seminar.</li>
+<li>2019/05/14, <strong><a href="https://scholar.google.co.nz/citations?user=PQYVtl4AAAAJ&hl=en">Su Nguyen</a></strong>, human centric heuristic evolution for dynamic scheduling.</strong></li>
+<li>2019/05/07, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMazharAnsariArdeh">Mazhar Anzari Ardeh</a></strong>, discussion on PhD proposal objectives.</li>
+<li>2019/04/30, <strong><a href="https://ecs.victoria.ac.nz/Main/GradTaoShi">Tao Shi</a></strong>, discussion on PhD proposal objectives.</li>
+<li>2019/04/16, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, solving scheduling problems with reinforcement learning.</li>
+<li>2019/04/09, <strong><a href="https://ecs.victoria.ac.nz/Main/GradGuiyingHuang">Victoria Huang</a></strong>, reinforcement learning for network scheduling policy optimisation.</li>
+<li>2019/04/02, Shaolin Wang, ensemble learning with genetic programming for UCARP.</li>
+<li>2019/03/26, <strong>Whole Group</strong>, discussions about niching methods.</li>
+<li>2019/03/19, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, memetic algorithm for data-intensive web service composition.</li>
+<li>2019/03/12, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, GPHH for two-level resource allocation in container-based clouds.</li>
+<li>2019/03/05, <strong><a href="https://www.victoria.ac.nz/som/research/phd/mgmt/amirhossein-mostofi">Amirhossein Mostofi</a></strong>, cooperative pharmaceutical supply chain.</li>
+<li>2019/02/26, <strong><a href="https://www.researchgate.net/profile/Binzi_Xu">Binzi Xu</a></strong>, evolving dispatching rules with delayed routing for dynamic flexible job shop scheduling.</li>
+<li>2019/02/19, <strong><a href="http://ecs.victoria.ac.nz/Main/YiMei">Yi Mei</a></strong>, introduction to MOEA/D.</li>
+<li>2019/02/12, <strong>Whole Group</strong>, how to deal with poor experimental results.</li>
+<li>2019/01/22, <strong>Whole Group</strong>, preparing for paper writing.</li>
+<li>2019/01/15, <strong>Whole Group</strong>, how to write paper fast.</li>
+<li>2019/01/08, <strong>Whole Group</strong>, update progress in the new year.</li>
+<li>2018/12/04, <strong>Jordan MacLaclan</strong>, practice on the AI paper presentation.</li>
+<li>2018/11/27, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, practice on PhD proposal presentation: text classification in medical domain.</li>
+<li>2018/11/20, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMazharAnsariArdeh">Mazhar Anzari Ardeh</a></strong>, transfer learning in GPHH for UCARP.</li>
+<li>2018/11/14, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, discussions on PhD proposal: text classification in medical domain.</li>
+<li>2018/11/07, <strong><a href="https://ecs.victoria.ac.nz/Main/GradGuiyingHuang">Victoria Huang</a></strong>, solving scheduling problems with reinforcement learning.</li>
+<li>2018/10/30, <strong><a href="http://ecs.victoria.ac.nz/Main/AaronChen">Aaron Chen</a></strong>, introduction on reinforcement learning.</li>
+<li>2018/10/23, <strong><a href="http://ecs.victoria.ac.nz/Main/YiMei">Yi Mei</a></strong>, introduction on &ldquo;combinatorial optimisation and how to solve it&rdquo;: part 2.</li>
+<li>2018/10/16, <strong><a href="http://ecs.victoria.ac.nz/Main/YiMei">Yi Mei</a></strong>, introduction on &ldquo;combinatorial optimisation and how to solve it&rdquo;: part 1.</li>
+<li>2018/10/09, <strong><a href="https://ecs.victoria.ac.nz/Main/GradTaoShi">Tao Shi</a></strong>, practice on Australasian AI 2018 presentation.</li>
+<li>2018/10/02, <strong><a href="https://ecs.victoria.ac.nz/Main/GradFangFangZhang">Fangfang Zhang</a></strong>, practice on the PhD proposal seminar.</li>
+<li>2018/09/25, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, practice on Australasian AI 2018 presentation.</li>
+<li>2018/09/18, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, practice on Australasian AI 2018 presentation.</li>
+<li>2018/09/11, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJohnPark">John Park</a></strong>, practice on Australasian AI 2018 presentation.</li>
+<li>2018/09/04, <strong><a href="https://ecs.victoria.ac.nz/Main/GradFangFangZhang">Fangfang Zhang</a></strong>, practice on Australasian AI 2018 presentation.</li>
+<li>2018/08/28, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, practice on Australasian AI 2018 presentation.</li>
+<li>2018/08/21, <strong>Whole group</strong>, watch video and discussion: <a href="https://www.youtube.com/watch?v=5fHMg0JkfqY">&ldquo;how to publish your research&rdquo;</a> by Xin Yao.</li>
+<li>2018/08/14, <strong><a href="https://www.researchgate.net/profile/Binzi_Xu">Binzi Xu</a></strong>, optimising energy consumption in real-world manufacturing scheduling.</li>
+<li>2018/08/07, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, practice on PhD proposal seminar.</li>
+<li>2018/07/31, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJohnPark">John Park</a></strong>, multi-task learning of dispatching rules in job shop scheduling.</li>
+<li>2018/07/24, <strong><a href="https://ecs.victoria.ac.nz/Main/YiMei">Yi Mei</a></strong>, experience in IEEE WCCI 2018 and ACM GECCO 2018.</li>
+<li>2018/07/17, <strong><a href="https://ecs.victoria.ac.nz/Main/GradMazharAnsariArdeh">Mazhar Anzari Ardeh</a></strong>, ICA.</li>
+<li>2018/07/10, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, Recent work.</li>
+<li>2018/07/03, <strong><a href="https://ecs.victoria.ac.nz/Main/GradGuiyingHuang">Victoria Huang</a></strong>, learning scheduling policy in SDN using reinforcement learning.</li>
+<li>2018/06/26, <strong><a href="https://ecs.victoria.ac.nz/Main/GradFangFangZhang">Fangfang Zhang</a></strong>, multi-tree genetic programming for dynamic flexible job shop scheduling.</li>
+<li>2018/06/19, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, EDA for semantic-aware Web service composition.<br /></li>
+<li>2018/06/12, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, objectives for PhD proposal: part 2.</li>
+<li>2018/06/05, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, objectives for PhD proposal: part 1.</li>
+<li>2018/05/29, <strong><a href="http://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, brief review on text classification.</li>
+<li>2018/05/22, <strong><a href="https://ecs.victoria.ac.nz/Main/GradYimingPeng">Yiming Peng</a></strong>, reinforcement learning for TSP.</li>
+<li>2018/05/15, <strong><a href="https://ecs.victoria.ac.nz/Main/GradYimingPeng">Yiming Peng</a></strong>, evolutionary strategies: Part 2. Slides available <a href="resources/Evolutionary_Strategies.pptx">here</a>.</li>
+<li>2018/05/08, <strong><a href="https://www.wbs.ac.uk/about/person/juergen-branke/">Prof Juergen Branke</a></strong>, <strong>Seminar</strong>: evolutionary scheduling in dynamic environment.</li>
+<li>2018/05/01, <strong>Whole group</strong>, <a href="https://www.wbs.ac.uk/about/person/juergen-branke/">Prof Juergen Branke</a>&rsquo;s visit: general discussions.</li>
+<li>2018/04/24, <strong><a href="https://ecs.victoria.ac.nz/Main/GradYimingPeng">Yiming Peng</a></strong>, evolutionary strategies: Part 1. Slides available <a href="resources/Evolutionary_Strategies.pptx">here</a>.</li>
+<li>2018/04/17, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, literature management using mind map and SQL.</li>
+<li>2018/04/10, <strong><a href="https://ecs.victoria.ac.nz/Main/GradJohnPark">John Park</a></strong>, recent work on job shop scheduling.</li>
+<li>2018/03/27, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, organisation of literature review.</li>
+<li>2018/03/20, <strong><a href="https://ecs.victoria.ac.nz/Main/GradAlexandreSawczukdaSilva">Alexandre Sawczuk da Silva</a></strong>, structure of his PhD thesis.</li>
+<li>2018/03/13, <strong><a href="https://ecs.victoria.ac.nz/Main/GradChenWang">Chen Wang</a></strong>, variational inference in autoencoder.</li>
+<li>2018/03/06, <strong><a href="https://ecs.victoria.ac.nz/Main/GradSoheilaSadeghiram">Soheila Sadeghiram</a></strong>, neural network and fuzzy system for text classification.</li>
+<li>2018/01/16, <strong><a href="http://ecs.victoria.ac.nz/Main/GradMahdiAbdollahi">Mahdi Abdollahi</a></strong>, introduction to Imperialist Competitive Algorithm (ICA), based on this <a href="resources/ICA_Atashpaz.pdf">CEC2007 paper</a>.</li>
+<li>2017/11/07, <strong>Whole group</strong>, discussions based on the video: &ldquo;<a href="https://www.youtube.com/watch?v=pcl08XA1REM">What Can Evolutionary Computation Do For You</a>&rdquo; by Xin Yao</li>
+<li>2017/10/31, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, PhD proposal seminar practice 2: &ldquo;Evolutionary computation for container-based resource allocation&rdquo;</li>
+<li>2017/10/24, <strong><a href="https://ecs.victoria.ac.nz/Main/GradBoxiongTan">Boxiong Tan</a></strong>, PhD proposal seminar practice 1: &ldquo;Evolutionary computation for container-based resource allocation&rdquo;</li>
+<li>2017/10/17, <strong>Whole group</strong>, Watch video: &ldquo;<a href="https://www.youtube.com/watch?v=pcl08XA1REM">What Can Evolutionary Computation Do For You</a>&rdquo; by Xin Yao</li>
+<li>2017/10/10, <strong>Whole group</strong>, Practice on &ldquo;how to read a paper&rdquo; &ndash; reading &ldquo;<a href="http://ieeexplore.ieee.org/abstract/document/873238/">Stochastic Ranking for Constrained Evolutionary Optimization&rdquo;</a></li>
+<li>2017/10/03, <strong>Whole group</strong>, Discussion on &ldquo;how to read a paper&rdquo;, part II</li>
+<li>2017/09/26, <strong>Whole group</strong>, Discussion on &ldquo;how to read a paper&rdquo;, part I</li>
+<li>2017/09/19, <strong><a href="https://scholar.google.co.nz/citations?user=YctRNIMAAAAJ&hl=en">Yuxin Liu</a></strong>, Discussion on &ldquo;An Evoluationary Approach to the Multidepot Capacitated Arc Routing Problems&rdquo;</li>
+<li>2017/09/12, <strong><a href="https://ecs.victoria.ac.nz/Main/GradAtiyaMasood">Atiya Masood</a></strong>, Reference point adaptation during many-objective optimisation (Part 1)</li>
+</ul>
+
+    </div>
+
+    
+
+
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.109caa4f51ff39522c6dfc25fb05b6e9.js"></script>
+
+  </body>
+</html>
+
