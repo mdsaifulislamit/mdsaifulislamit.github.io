@@ -812,6 +812,12 @@
 
     </div>
 
+    <div class="article-style" itemprop="articleBody">
+    This paper presents a novel query for spatial databases, called reverse nearest neighborhood (RNH) query, to discover the neighborhoods that find a query facility as their nearest facility among other facilities in the dataset. Unlike a reverse nearest neighbor (RNN) query, an RNH query emphasizes on group of users instead of an individual user. More specifically, given a set of user locations U, a set of facility locations F, a query location \rho, a distance parameter d and a positive integer k, an RNH query returns all \rho-radius circles C enclosing at least k users, called neighborhoods (NH) such that the distance between q and C is less than the distance between C and any other facility f in F. The RNH queries might have many practical applications including on demand facility placement and smart urban planning. We present an efficient approach for processing RNH queries on location data using R-tree based data indexing. In our approach, first we retrieve candidate RNH users by an efficient bound, prune and refine technique. Then, we incrementally discover RNHs of a query facility from these candidate RNH users. We also present the variants of RNH queries in spatial databases and propose solutions for them. We validate our approach by conducting extensive experiments with real datasets.
+    </div>
+
+
+
 
     <div class="btn-links">
 
